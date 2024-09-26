@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Include Bootstrap CSS here -->
+</head>
+<body>
+
+<div class="container mt-3">
+    <h2>Ticket Details</h2>
+
+    <dl class="row">
+        <dt class="col-sm-3">Title:</dt>
+        <dd class="col-sm-9" th:text="${ticket.title}"></dd>
+
+        <dt class="col-sm-3">Short Description:</dt>
+        <dd class="col-sm-9" th:text="${ticket.shortDescription}"></dd>
+
+        <dt class="col-sm-3">Created Date:</dt>
+        <dd class="col-sm-9" th:text="${ticket.createdDate}"></dd>
+    </dl>
+
+    <a th:href="@{/tickets}" class="btn btn-secondary">Back to Tickets</a>
+</div>
+
+</body>
+</html>
